@@ -1661,6 +1661,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1906898121}
+  - component: {fileID: 1906898122}
   m_Layer: 0
   m_Name: Workbench
   m_TagString: Untagged
@@ -1684,6 +1685,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1906898122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1906898120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9c27e31c1668284d96932d44924f046, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1955265580
 GameObject:
   m_ObjectHideFlags: 0
@@ -1724,6 +1736,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bea00fb50ade6548be758647b32a31b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  contentPrefabs:
+  - {fileID: 1491094961931358, guid: 129e1b7ed0ed3fa4e848d23c4ae84074, type: 2}
+  - {fileID: 1491094961931358, guid: f20f3a7daac58d749b4353cdb77c2143, type: 2}
 --- !u!1001 &2059216176
 Prefab:
   m_ObjectHideFlags: 0
