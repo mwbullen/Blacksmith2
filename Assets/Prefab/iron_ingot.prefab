@@ -90,7 +90,7 @@ MonoBehaviour:
       colorIndex: 1
       position:
         serializedVersion: 2
-        x: 338.40625
+        x: 242.40625
         y: 108.60156
         width: 122
         height: 32
@@ -256,7 +256,7 @@ MonoBehaviour:
       colorIndex: 5
       position:
         serializedVersion: 2
-        x: 339.01562
+        x: 243.01562
         y: 184.27344
         width: 190
         height: 48
@@ -365,8 +365,8 @@ MonoBehaviour:
       colorIndex: 3
       position:
         serializedVersion: 2
-        x: 346.1953
-        y: 293.60156
+        x: 280.7578
+        y: 293.6328
         width: 122
         height: 16
       isBreakpoint: 0
@@ -491,8 +491,8 @@ MonoBehaviour:
       colorIndex: 1
       position:
         serializedVersion: 2
-        x: 51.1875
-        y: 125.77344
+        x: 56.304688
+        y: 107.57031
         width: 100
         height: 16
       isBreakpoint: 0
@@ -543,7 +543,7 @@ MonoBehaviour:
       colorIndex: 7
       position:
         serializedVersion: 2
-        x: 164.92188
+        x: 68.921875
         y: 154.3125
         width: 100
         height: 32
@@ -620,7 +620,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 0.1
+          value: 0.05
         fsmIntParams: []
         fsmBoolParams: []
         fsmVector2Params: []
@@ -731,7 +731,7 @@ MonoBehaviour:
     locked: 0
     manualUpdate: 0
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 1
+    preprocessed: 0
     ExposedEvents: []
     RestartOnEnable: 1
     EnableDebugFlow: 0
