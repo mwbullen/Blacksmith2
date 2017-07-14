@@ -14,12 +14,13 @@ public class ContentsManager : MonoBehaviour {
 
 	//	saveContentInfo ();
 
-		gameControl = GameObject.Find ("GameControl");
+
 
 	}
 
 
 	public void loadContents(ContentsManagerInfo contents) {
+		gameControl = GameObject.Find ("GameControl");
 		contentInfo = contents;
 
 		//int i = 0;

@@ -11,7 +11,7 @@ namespace AssemblyCSharp
 
 		public ContentsManagerInfo ()
 		{
-	
+			//contents.Add (ContentType.contentItem.copper_ingot);
 		}
 	}
 }
