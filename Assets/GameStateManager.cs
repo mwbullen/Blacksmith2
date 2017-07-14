@@ -15,7 +15,16 @@ public class GameStateManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+		//load saved game
+		//if saved null, create new GameStateInfo
+
+		currentGameStateInfo = loadSavedGame ();
+
+		if (currentGameStateInfo == null) {
+			currentGameStateInfo = new GameStateInfo ();
+		}
+
+		loadWorkBenches ();
 	}
 	
 	// Update is called once per frame
@@ -23,16 +32,14 @@ public class GameStateManager : MonoBehaviour {
 		
 	}
 
-	void loadWorkBenches() {
-		foreach (ContentsManagerInfo workInfo in currentGameStateInfo.workBenches) {
-			GameObject newWorkBench = GameObject.Instantiate (workBenchPrefab);
+	public void newGame() {
+		deleteSavedGame();
+		reloadScene();
+	}
 
-			newWorkBench.GetComponent<ContentsManager> ().loadContents (workInfo);
-
-			//newWorkBench.loadWorkbenchInfo (workInfo);
-
-			newWorkBench.transform.SetParent (WorkBenchArea.transform);
-		}
+	void reloadScene() {
+		Debug.Log ("reloading");
+		UnityEngine.SceneManagement.SceneManager.LoadSceneAsync (0);
 	}
 
 	void saveContentInfo() {
@@ -49,16 +56,35 @@ public class GameStateManager : MonoBehaviour {
 
 	}
 
-	void loadSavedGame() {
-		
+	void deleteSavedGame() {
+		File.Delete (Application.persistentDataPath + "/" + "savegame.gam");
+	}
+
+	GameStateInfo loadSavedGame() {
+		GameStateInfo savedGameState = null;
+
 		if (File.Exists (Application.persistentDataPath + "/" + "savegame.gam")) {
 			BinaryFormatter bf = new BinaryFormatter ();
 
 			FileStream fs = File.Open (Application.persistentDataPath + "/" + "savegame.gam", FileMode.Open);
 
-			currentGameStateInfo = (GameStateInfo)bf.Deserialize (fs);
+			savedGameState = (GameStateInfo)bf.Deserialize (fs);
 
 			fs.Close ();
 		}
-					}
+
+		return savedGameState;
+	}
+
+	void loadWorkBenches() {
+		foreach (WorkbenchInfo workInfo in currentGameStateInfo.workBenches) {
+			GameObject newWorkBench = GameObject.Instantiate (workBenchPrefab);
+
+			newWorkBench.GetComponent<ContentsManager> ().loadContents (workInfo);
+
+			//newWorkBench.loadWorkbenchInfo (workInfo);
+
+			newWorkBench.transform.SetParent (WorkBenchArea.transform);
+		}
+	}
 }

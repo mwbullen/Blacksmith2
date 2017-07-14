@@ -5,10 +5,9 @@ using System.Collections.Generic;
 namespace AssemblyCSharp
 {
 	[Serializable]
-	public class WorkbenchInfo
+	public class WorkbenchInfo :ContentsManagerInfo
 	{		
-		public List<ContentType.contentItem> contents;
-
+		
 		public WorkbenchInfo ()
 		{
 		}
