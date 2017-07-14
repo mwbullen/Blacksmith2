@@ -84,7 +84,8 @@ public class GameStateManager : MonoBehaviour {
 
 			//newWorkBench.loadWorkbenchInfo (workInfo);
 
-			newWorkBench.transform.SetParent (WorkBenchArea.transform);
+			newWorkBench.transform.SetParent (WorkBenchArea.transform,false);
+			//newWorkBench.transform.position = new Vector2 (0, 0);
 		}
 	}
 }
