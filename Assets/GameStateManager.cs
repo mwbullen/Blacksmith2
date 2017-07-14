@@ -42,6 +42,24 @@ public class GameStateManager : MonoBehaviour {
 		UnityEngine.SceneManagement.SceneManager.LoadSceneAsync (0);
 	}
 
+	public void saveGame() {
+		//refresh gamecontentinfo
+		refreshGameContentInfo();
+		saveContentInfo();
+	}
+
+	void refreshGameContentInfo() {
+		//GameStateInfo newGameStateInfo = new GameStateInfo ();
+
+		currentGameStateInfo.workBenches.Clear ();
+
+		foreach (GameObject workBench in GameObject.FindGameObjectsWithTag("WorkBench")) {
+			WorkbenchInfo tmpWBInfo = (WorkbenchInfo) workBench.GetComponent<WorkBenchContentsManager>().getCurrentContents ();
+			currentGameStateInfo.workBenches.Add (tmpWBInfo);
+
+		}
+	}
+
 	void saveContentInfo() {
 		//serialize gamestateinfo
 

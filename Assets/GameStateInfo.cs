@@ -11,7 +11,7 @@ namespace AssemblyCSharp
 		public GameStateInfo ()
 		{
 			//new game
-			workBenches.Add(new WorkbenchInfo());
+			//workBenches.Add(new WorkbenchInfo());
 
 		}
 

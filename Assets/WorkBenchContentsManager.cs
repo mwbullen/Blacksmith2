@@ -3,23 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using AssemblyCSharp;
 
-
-public class ContentsManager : MonoBehaviour {
-	public ContentsManagerInfo contentInfo;
+public class WorkBenchContentsManager : MonoBehaviour {
+	public WorkbenchInfo contentInfo;
 	public GameObject slotsParent;
 
 	public GameObject gameControl;
+
 	// Use this for initialization
 	void Start () {
-		//contentInfo = loadContentInfo ();
-
-	//	saveContentInfo ();
-
-
-
+		
+	}
+	
+	// Update is called once per frame
+	void Update () {
+		
 	}
 
-	public void loadContents(ContentsManagerInfo contents) {
+	public void loadContents(WorkbenchInfo contents) {
 		gameControl = GameObject.Find ("GameControl");
 		contentInfo = contents;
 
@@ -38,7 +38,7 @@ public class ContentsManager : MonoBehaviour {
 
 			}
 
-		//	i +=1;
+			//	i +=1;
 		}
 	}
 
@@ -50,8 +50,12 @@ public class ContentsManager : MonoBehaviour {
 
 			if (slot.transform.childCount > 0) {
 				GameObject slotteditem = slot.transform.GetChild (0).gameObject;
+				string slottedItemName = slotteditem.name;
 
-				ContentType.contentItem childContent = (ContentType.contentItem) System.Enum.Parse (typeof(ContentType.contentItem), slotteditem.name.ToString());
+				slottedItemName = slottedItemName.Replace ("(Clone)", "");
+
+				Debug.Log (slottedItemName);
+				ContentType.contentItem childContent = (ContentType.contentItem) System.Enum.Parse (typeof(ContentType.contentItem), slottedItemName);
 
 				contentInfo.contents.Add (childContent);
 			}
@@ -60,12 +64,5 @@ public class ContentsManager : MonoBehaviour {
 
 		return contentInfo;
 	}
-
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
 
 }
