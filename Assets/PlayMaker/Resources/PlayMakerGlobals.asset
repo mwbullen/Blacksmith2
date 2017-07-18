@@ -33,3 +33,10 @@ MonoBehaviour:
   events:
   - Dragging
   - Released
+  - SaveGame
+  - FINISHED
+  - checkContainer
+  - container Not Empty
+  - container is Empty
+  - PickUp
+  - New Game

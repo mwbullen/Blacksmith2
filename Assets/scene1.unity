@@ -873,12 +873,12 @@ MonoBehaviour:
     events:
     - name: New Game
       isSystemEvent: 0
-      isGlobal: 0
+      isGlobal: 1
     globalTransitions:
     - fsmEvent:
         name: New Game
         isSystemEvent: 0
-        isGlobal: 0
+        isGlobal: 1
       toState: New Game
       linkStyle: 0
       linkConstraint: 0
@@ -1176,38 +1176,31 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114458411953603078, guid: 129e1b7ed0ed3fa4e848d23c4ae84074,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: fsm.states.Array.data[0].actionData.fsmVector2Params.Array.data[0].value.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114458411953603078, guid: 129e1b7ed0ed3fa4e848d23c4ae84074,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: fsm.states.Array.data[0].actionData.fsmVector2Params.Array.data[0].value.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114458411953603078, guid: 129e1b7ed0ed3fa4e848d23c4ae84074,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: fsm.states.Array.data[1].actionData.fsmOwnerDefaultParams.Array.data[0].gameObject.value
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 114458411953603078, guid: 129e1b7ed0ed3fa4e848d23c4ae84074,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: fsm.variables.boolVariables.Array.data[0].value
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114458411953603078, guid: 129e1b7ed0ed3fa4e848d23c4ae84074,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: fsm.variables.gameObjectVariables.Array.data[0].value
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 114458411953603078, guid: 129e1b7ed0ed3fa4e848d23c4ae84074,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: fsm.variables.gameObjectVariables.Array.data[1].value
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 114458411953603078, guid: 129e1b7ed0ed3fa4e848d23c4ae84074,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: fsm.variables.intVariables.Array.data[0].value
       value: 0
       objectReference: {fileID: 0}
@@ -1215,18 +1208,15 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 0.5160397
       objectReference: {fileID: 0}
-    - target: {fileID: 114623109821018050, guid: 129e1b7ed0ed3fa4e848d23c4ae84074,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: fsm.preprocessed
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114458411953603078, guid: 129e1b7ed0ed3fa4e848d23c4ae84074,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: fsm.activeStateName
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 114458411953603078, guid: 129e1b7ed0ed3fa4e848d23c4ae84074,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: eventHandlerComponentsAdded
       value: 0
       objectReference: {fileID: 0}
@@ -1793,98 +1783,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4058972756964948, guid: 034a5444dc495b540943ba7946442377,
     type: 2}
   m_PrefabInternal: {fileID: 1443725535}
---- !u!1001 &1510196667
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 447065683}
-    m_Modifications:
-    - target: {fileID: 4311142507259884, guid: 129e1b7ed0ed3fa4e848d23c4ae84074, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4311142507259884, guid: 129e1b7ed0ed3fa4e848d23c4ae84074, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4311142507259884, guid: 129e1b7ed0ed3fa4e848d23c4ae84074, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4311142507259884, guid: 129e1b7ed0ed3fa4e848d23c4ae84074, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4311142507259884, guid: 129e1b7ed0ed3fa4e848d23c4ae84074, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4311142507259884, guid: 129e1b7ed0ed3fa4e848d23c4ae84074, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4311142507259884, guid: 129e1b7ed0ed3fa4e848d23c4ae84074, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4311142507259884, guid: 129e1b7ed0ed3fa4e848d23c4ae84074, type: 2}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114458411953603078, guid: 129e1b7ed0ed3fa4e848d23c4ae84074,
-        type: 2}
-      propertyPath: fsm.states.Array.data[0].actionData.fsmVector2Params.Array.data[0].value.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114458411953603078, guid: 129e1b7ed0ed3fa4e848d23c4ae84074,
-        type: 2}
-      propertyPath: fsm.states.Array.data[0].actionData.fsmVector2Params.Array.data[0].value.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114458411953603078, guid: 129e1b7ed0ed3fa4e848d23c4ae84074,
-        type: 2}
-      propertyPath: fsm.states.Array.data[1].actionData.fsmOwnerDefaultParams.Array.data[0].gameObject.value
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114458411953603078, guid: 129e1b7ed0ed3fa4e848d23c4ae84074,
-        type: 2}
-      propertyPath: fsm.variables.boolVariables.Array.data[0].value
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114458411953603078, guid: 129e1b7ed0ed3fa4e848d23c4ae84074,
-        type: 2}
-      propertyPath: fsm.variables.gameObjectVariables.Array.data[0].value
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114458411953603078, guid: 129e1b7ed0ed3fa4e848d23c4ae84074,
-        type: 2}
-      propertyPath: fsm.variables.gameObjectVariables.Array.data[1].value
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114458411953603078, guid: 129e1b7ed0ed3fa4e848d23c4ae84074,
-        type: 2}
-      propertyPath: fsm.activeStateName
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114458411953603078, guid: 129e1b7ed0ed3fa4e848d23c4ae84074,
-        type: 2}
-      propertyPath: eventHandlerComponentsAdded
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114458411953603078, guid: 129e1b7ed0ed3fa4e848d23c4ae84074,
-        type: 2}
-      propertyPath: fsm.variables.intVariables.Array.data[0].value
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114623109821018050, guid: 129e1b7ed0ed3fa4e848d23c4ae84074,
-        type: 2}
-      propertyPath: fsm.preprocessed
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 129e1b7ed0ed3fa4e848d23c4ae84074, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1001 &1604906297
 Prefab:
   m_ObjectHideFlags: 0
@@ -2042,48 +1940,39 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114458411953603078, guid: 129e1b7ed0ed3fa4e848d23c4ae84074,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: fsm.states.Array.data[0].actionData.fsmVector2Params.Array.data[0].value.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114458411953603078, guid: 129e1b7ed0ed3fa4e848d23c4ae84074,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: fsm.states.Array.data[0].actionData.fsmVector2Params.Array.data[0].value.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114458411953603078, guid: 129e1b7ed0ed3fa4e848d23c4ae84074,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: fsm.states.Array.data[1].actionData.fsmOwnerDefaultParams.Array.data[0].gameObject.value
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 114458411953603078, guid: 129e1b7ed0ed3fa4e848d23c4ae84074,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: fsm.variables.boolVariables.Array.data[0].value
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114458411953603078, guid: 129e1b7ed0ed3fa4e848d23c4ae84074,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: fsm.variables.gameObjectVariables.Array.data[0].value
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 114458411953603078, guid: 129e1b7ed0ed3fa4e848d23c4ae84074,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: fsm.variables.gameObjectVariables.Array.data[1].value
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 114458411953603078, guid: 129e1b7ed0ed3fa4e848d23c4ae84074,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: fsm.activeStateName
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 114458411953603078, guid: 129e1b7ed0ed3fa4e848d23c4ae84074,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: eventHandlerComponentsAdded
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114458411953603078, guid: 129e1b7ed0ed3fa4e848d23c4ae84074,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: fsm.variables.intVariables.Array.data[0].value
       value: 0
       objectReference: {fileID: 0}
@@ -2091,8 +1980,7 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 0.5160397
       objectReference: {fileID: 0}
-    - target: {fileID: 114623109821018050, guid: 129e1b7ed0ed3fa4e848d23c4ae84074,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: fsm.preprocessed
       value: 0
       objectReference: {fileID: 0}
@@ -2180,38 +2068,31 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114458411953603078, guid: 129e1b7ed0ed3fa4e848d23c4ae84074,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: fsm.states.Array.data[0].actionData.fsmVector2Params.Array.data[0].value.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114458411953603078, guid: 129e1b7ed0ed3fa4e848d23c4ae84074,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: fsm.states.Array.data[0].actionData.fsmVector2Params.Array.data[0].value.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114458411953603078, guid: 129e1b7ed0ed3fa4e848d23c4ae84074,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: fsm.states.Array.data[1].actionData.fsmOwnerDefaultParams.Array.data[0].gameObject.value
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 114458411953603078, guid: 129e1b7ed0ed3fa4e848d23c4ae84074,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: fsm.variables.boolVariables.Array.data[0].value
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114458411953603078, guid: 129e1b7ed0ed3fa4e848d23c4ae84074,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: fsm.variables.gameObjectVariables.Array.data[0].value
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 114458411953603078, guid: 129e1b7ed0ed3fa4e848d23c4ae84074,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: fsm.variables.gameObjectVariables.Array.data[1].value
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 114458411953603078, guid: 129e1b7ed0ed3fa4e848d23c4ae84074,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: fsm.variables.intVariables.Array.data[0].value
       value: 0
       objectReference: {fileID: 0}
@@ -2219,8 +2100,7 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 0.5160397
       objectReference: {fileID: 0}
-    - target: {fileID: 114623109821018050, guid: 129e1b7ed0ed3fa4e848d23c4ae84074,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: fsm.preprocessed
       value: 0
       objectReference: {fileID: 0}
@@ -2238,6 +2118,7 @@ GameObject:
   - component: {fileID: 1955265582}
   - component: {fileID: 1955265583}
   - component: {fileID: 1955265584}
+  - component: {fileID: 1955265585}
   m_Layer: 0
   m_Name: GameControl
   m_TagString: Untagged
@@ -2303,7 +2184,7 @@ MonoBehaviour:
   fsm:
     dataVersion: 2
     usedInTemplate: {fileID: 0}
-    name: FSM
+    name: SaveGame
     startState: State 1
     states:
     - name: State 1
@@ -2620,6 +2501,19 @@ MonoBehaviour:
     handleAnimatorIK: 0
   fsmTemplate: {fileID: 0}
   eventHandlerComponentsAdded: 0
+--- !u!114 &1955265585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1955265580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0aafa6e633347b349a2e679066c12c42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileDragControlPrefab: {fileID: 1447496192135976, guid: dbf5c0acf38dc9e4abc8b1087a1da935,
+    type: 2}
 --- !u!4 &1993591684 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4716522402029562, guid: d4567f76eac6ac84abdef42d39b67fa8,
