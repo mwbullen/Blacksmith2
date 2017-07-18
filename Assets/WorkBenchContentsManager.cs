@@ -23,13 +23,17 @@ public class WorkBenchContentsManager : MonoBehaviour {
 		gameControl = GameObject.Find ("GameControl");
 		contentInfo = contents;
 
-		//int i = 0;
+		int x = 0;
+
 		foreach (ContentType.contentItem contentItem in contentInfo.contents) {
 			//GameObject childContainer = gameObject.transform.GetChild (i).gameObject;
 
 			GameObject newSlot = gameControl.GetComponent<TileManager> ().getPrefabforContentType (ContentType.contentItem.slot);
+
 			newSlot.transform.SetParent (slotsParent.transform);
-			newSlot.transform.localPosition = new Vector3 (0, 0, 0);
+
+			//RectTransform rt = (RectTransform)newSlot.transform;
+			newSlot.transform.localPosition = new Vector3 (x  , 0, 0);
 
 			if (contentItem != ContentType.contentItem.none) {
 				GameObject newItem = gameControl.GetComponent<TileManager> ().getPrefabforContentType (contentItem);
@@ -39,9 +43,11 @@ public class WorkBenchContentsManager : MonoBehaviour {
 
 			}
 
-			//	i +=1;
+			x += 1;
 		}
 	}
+
+
 
 	public ContentsManagerInfo getCurrentContents() {
 		contentInfo.contents.Clear ();
@@ -56,9 +62,11 @@ public class WorkBenchContentsManager : MonoBehaviour {
 				slottedItemName = slottedItemName.Replace ("(Clone)", "");
 
 				Debug.Log (slottedItemName);
-				ContentType.contentItem childContent = (ContentType.contentItem) System.Enum.Parse (typeof(ContentType.contentItem), slottedItemName);
+				ContentType.contentItem childContent = (ContentType.contentItem)System.Enum.Parse (typeof(ContentType.contentItem), slottedItemName);
 
 				contentInfo.contents.Add (childContent);
+			} else { //empty slot
+				contentInfo.contents.Add(ContentType.contentItem.none);
 			}
 
 		}
