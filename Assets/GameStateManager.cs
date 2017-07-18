@@ -35,6 +35,7 @@ public class GameStateManager : MonoBehaviour {
 	public void newGame() {
 		deleteSavedGame();
 
+		currentGameStateInfo = new GameStateInfo ();
 		addEmptyWorkBench ();
 
 		saveContentInfo();
