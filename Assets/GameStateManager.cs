@@ -11,6 +11,9 @@ public class GameStateManager : MonoBehaviour {
 	public GameObject workBenchPrefab;
 
 	public GameObject WorkBenchArea;
+	public GameObject Inventory;
+
+
 
 
 	// Use this for initialization
@@ -25,6 +28,7 @@ public class GameStateManager : MonoBehaviour {
 		}
 
 		loadWorkBenches ();
+		loadInventory ();
 	}
 	
 	// Update is called once per frame
@@ -38,10 +42,28 @@ public class GameStateManager : MonoBehaviour {
 		currentGameStateInfo = new GameStateInfo ();
 		addEmptyWorkBench ();
 
+		createDefaultInventory ();
+
 		saveContentInfo();
 
 		reloadScene();
 
+
+	}
+
+	void createDefaultInventory() {
+		currentGameStateInfo.inventoryContents = new ContentsManagerInfo ();
+		currentGameStateInfo.inventoryContents.contents.Add (ContentType.contentItem.copper_ingot);
+		currentGameStateInfo.inventoryContents.contents.Add (ContentType.contentItem.iron_ingot);
+		currentGameStateInfo.inventoryContents.contents.Add (ContentType.contentItem.copper_ingot);
+
+		currentGameStateInfo.inventoryContents.contents.Add (ContentType.contentItem.none);
+		currentGameStateInfo.inventoryContents.contents.Add (ContentType.contentItem.none);
+		currentGameStateInfo.inventoryContents.contents.Add (ContentType.contentItem.none);
+		currentGameStateInfo.inventoryContents.contents.Add (ContentType.contentItem.none);
+		currentGameStateInfo.inventoryContents.contents.Add (ContentType.contentItem.none);
+		currentGameStateInfo.inventoryContents.contents.Add (ContentType.contentItem.none);
+		currentGameStateInfo.inventoryContents.contents.Add (ContentType.contentItem.none);
 
 	}
 
@@ -76,8 +98,9 @@ public class GameStateManager : MonoBehaviour {
 		foreach (GameObject workBench in GameObject.FindGameObjectsWithTag("WorkBench")) {
 			WorkbenchInfo tmpWBInfo = (WorkbenchInfo) workBench.GetComponent<WorkBenchContentsManager>().getCurrentContents ();
 			currentGameStateInfo.workBenches.Add (tmpWBInfo);
-
 		}
+
+		currentGameStateInfo.inventoryContents = Inventory.GetComponent<ContentsManager> ().getCurrentContents ();
 	}
 
 	void saveContentInfo() {
@@ -123,5 +146,9 @@ public class GameStateManager : MonoBehaviour {
 			newWorkBench.transform.SetParent (WorkBenchArea.transform,false);
 			newWorkBench.transform.localPosition = new Vector3 (0, 0,0);
 		}
+	}
+
+	void loadInventory() {
+		Inventory.GetComponent<ContentsManager> ().loadContents (currentGameStateInfo.inventoryContents);
 	}
 }
