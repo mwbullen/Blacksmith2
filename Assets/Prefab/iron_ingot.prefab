@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212218108477315948}
   - component: {fileID: 61410770305005660}
   - component: {fileID: 114221958661416722}
+  - component: {fileID: 114627898679722678}
   m_Layer: 0
   m_Name: iron_ingot
   m_TagString: Untagged
@@ -78,6 +79,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a720d85e514145440a6763150e0a68ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114627898679722678
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1491094961931358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 508a932ab217dae479fa489cdf1a568c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileType: iron_ingot
 --- !u!212 &212218108477315948
 SpriteRenderer:
   m_ObjectHideFlags: 1

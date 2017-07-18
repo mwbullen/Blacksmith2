@@ -34,7 +34,26 @@ public class GameStateManager : MonoBehaviour {
 
 	public void newGame() {
 		deleteSavedGame();
+
+		addEmptyWorkBench ();
+
+		saveContentInfo();
+
 		reloadScene();
+
+
+	}
+
+	void addEmptyWorkBench() {
+		WorkbenchInfo newBenchInfo = new WorkbenchInfo ();
+
+		newBenchInfo.contents = new List<ContentType.contentItem>();
+		newBenchInfo.contents.Add(ContentType.contentItem.none);
+		newBenchInfo.contents.Add(ContentType.contentItem.none);
+		newBenchInfo.contents.Add(ContentType.contentItem.none);
+
+		currentGameStateInfo.workBenches.Add(newBenchInfo);
+
 	}
 
 	void reloadScene() {
@@ -98,12 +117,10 @@ public class GameStateManager : MonoBehaviour {
 		foreach (WorkbenchInfo workInfo in currentGameStateInfo.workBenches) {
 			GameObject newWorkBench = GameObject.Instantiate (workBenchPrefab);
 
-			newWorkBench.GetComponent<ContentsManager> ().loadContents (workInfo);
-
-			//newWorkBench.loadWorkbenchInfo (workInfo);
+			newWorkBench.GetComponent<WorkBenchContentsManager> ().loadContents (workInfo);
 
 			newWorkBench.transform.SetParent (WorkBenchArea.transform,false);
-			//newWorkBench.transform.position = new Vector2 (0, 0);
+			newWorkBench.transform.localPosition = new Vector3 (0, 0,0);
 		}
 	}
 }

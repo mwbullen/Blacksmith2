@@ -51,9 +51,11 @@ public class ContentsManager : MonoBehaviour {
 			if (slot.transform.childCount > 0) {
 				GameObject slotteditem = slot.transform.GetChild (0).gameObject;
 
-				ContentType.contentItem childContent = (ContentType.contentItem) System.Enum.Parse (typeof(ContentType.contentItem), slotteditem.name.ToString());
+				//ContentType.contentItem childContent = (ContentType.contentItem) System.Enum.Parse (typeof(ContentType.contentItem), slotteditem.name.ToString());
+				ContentType.contentItem tileContentType = slotteditem.GetComponent<tileDetail>().tileContentType;
 
-				contentInfo.contents.Add (childContent);
+
+				contentInfo.contents.Add (tileContentType);
 			}
 
 		}

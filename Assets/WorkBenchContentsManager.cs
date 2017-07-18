@@ -29,6 +29,7 @@ public class WorkBenchContentsManager : MonoBehaviour {
 
 			GameObject newSlot = gameControl.GetComponent<TileManager> ().getPrefabforContentType (ContentType.contentItem.slot);
 			newSlot.transform.SetParent (slotsParent.transform);
+			newSlot.transform.localPosition = new Vector3 (0, 0, 0);
 
 			if (contentItem != ContentType.contentItem.none) {
 				GameObject newItem = gameControl.GetComponent<TileManager> ().getPrefabforContentType (contentItem);
