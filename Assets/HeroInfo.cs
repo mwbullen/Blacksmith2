@@ -6,7 +6,10 @@ namespace AssemblyCSharp
 	[Serializable]
 	public class HeroInfo
 	{		
-		
+		static string[] possibleNames = { "Archer", "Cyril", "Lana", "Pam", "Mallory", "Kreiger" }; 
+
+		static System.Random r = new Random ();
+
 		public string heroName;
 		public int maxHealth;
 		public int currentHealth;
@@ -14,12 +17,9 @@ namespace AssemblyCSharp
 		public enum Activity	{none, atShop, Exploring, Fighting, Returning	};
 		public Activity currentActivity = Activity.none;
 
-		public HeroInfo (string newHeroName)
+		public HeroInfo ()
 		{
-			//System.Random r = new Random ();
-			heroName = newHeroName;
-			//Name = possibleNames[r.Next(0, possibleNames.Length)];
-							
+			heroName= possibleNames[r.Next(0, possibleNames.Length)];							
 		}
 	}
 }

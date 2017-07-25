@@ -50,18 +50,9 @@ public class GameStateManager : MonoBehaviour {
 
 	}
 
-	static string[] possibleNames = { "Archer", "Cyril", "Lana", "Pam", "Mallory", "Kreiger" }; 
-
 	void createRandomHeroes() {
 		for (int i = 0; i < 3; i++) {
-			int randomNamex = Random.Range (0, possibleNames.Length);
-	//		Debug.Log (randomNamex);
-			string newName = possibleNames [randomNamex];
-	//		Debug.Log (newName);
-
-			HeroInfo newHero = new HeroInfo (newName);
-
-
+			HeroInfo newHero = new HeroInfo ();
 			currentGameStateInfo.heroes.Add (newHero);
 		}
 	}
