@@ -9,6 +9,7 @@ namespace AssemblyCSharp
 		public List<WorkbenchInfo> workBenches = new List<WorkbenchInfo>();
 		public ContentsManagerInfo inventoryContents = new ContentsManagerInfo();
 
+		public List<HeroInfo> heroes = new List<HeroInfo>();
 
 		public GameStateInfo ()
 		{

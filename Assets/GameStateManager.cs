@@ -9,12 +9,11 @@ public class GameStateManager : MonoBehaviour {
 
 	public GameStateInfo currentGameStateInfo;
 	public GameObject workBenchPrefab;
+	public GameObject heroPrefab;
 
 	public GameObject WorkBenchArea;
 	public GameObject Inventory;
-
-
-
+	public GameObject HeroArea;
 
 	// Use this for initialization
 	void Start () {
@@ -29,6 +28,7 @@ public class GameStateManager : MonoBehaviour {
 
 		loadWorkBenches ();
 		loadInventory ();
+		loadHeroes ();
 	}
 	
 	// Update is called once per frame
@@ -38,17 +38,32 @@ public class GameStateManager : MonoBehaviour {
 
 	public void newGame() {
 		deleteSavedGame();
-
 		currentGameStateInfo = new GameStateInfo ();
-		addEmptyWorkBench ();
 
+		addEmptyWorkBench ();
 		createDefaultInventory ();
+		createRandomHeroes ();
 
 		saveContentInfo();
-
 		reloadScene();
 
 
+	}
+
+	static string[] possibleNames = { "Archer", "Cyril", "Lana", "Pam", "Mallory", "Kreiger" }; 
+
+	void createRandomHeroes() {
+		for (int i = 0; i < 3; i++) {
+			int randomNamex = Random.Range (0, possibleNames.Length);
+	//		Debug.Log (randomNamex);
+			string newName = possibleNames [randomNamex];
+	//		Debug.Log (newName);
+
+			HeroInfo newHero = new HeroInfo (newName);
+
+
+			currentGameStateInfo.heroes.Add (newHero);
+		}
 	}
 
 	void createDefaultInventory() {
@@ -150,5 +165,18 @@ public class GameStateManager : MonoBehaviour {
 
 	void loadInventory() {
 		Inventory.GetComponent<ContentsManager> ().loadContents (currentGameStateInfo.inventoryContents);
+	}
+
+	void loadHeroes() {
+		int y = 0;
+		foreach (HeroInfo heroInfo in currentGameStateInfo.heroes) {
+			GameObject newHero = GameObject.Instantiate (heroPrefab);
+			newHero.GetComponent<HeroStatus> ().loadHeroInfo (heroInfo);
+
+			newHero.transform.SetParent (HeroArea.transform);
+			newHero.transform.localPosition = new Vector3 (0, y, 0);
+
+			y += 1;
+		}
 	}
 }
