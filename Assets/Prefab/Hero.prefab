@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 23062758259104196}
   - component: {fileID: 102242354281495686}
   m_Layer: 0
-  m_Name: Name
+  m_Name: Activity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -60,18 +60,48 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4180308544554376
+--- !u!1 &1989130680227538
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4137693878997256}
+  - component: {fileID: 23667311921982744}
+  - component: {fileID: 102480581164090422}
+  m_Layer: 0
+  m_Name: Name
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4137693878997256
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1120163628434602}
+  m_GameObject: {fileID: 1989130680227538}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.418, y: 0.476, z: -0.04}
   m_LocalScale: {x: 0.10139991, y: 0.10549674, z: 1}
   m_Children: []
   m_Father: {fileID: 4367169409417752}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4180308544554376
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1120163628434602}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.48, y: 0.18, z: -0.04}
+  m_LocalScale: {x: 0.101399995, y: 0.1055, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4367169409417752}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4367169409417752
 Transform:
@@ -80,10 +110,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1237419488315220}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.3179083, y: -0.88067156, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4526163524514274}
+  - {fileID: 4137693878997256}
   - {fileID: 4180308544554376}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -133,6 +164,38 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!23 &23667311921982744
+MeshRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1989130680227538}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
 --- !u!102 &102242354281495686
 TextMesh:
   serializedVersion: 3
@@ -140,6 +203,27 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1120163628434602}
+  m_Text: Activity
+  m_OffsetZ: 0
+  m_CharacterSize: 0.96
+  m_LineSpacing: 1
+  m_Anchor: 2
+  m_Alignment: 2
+  m_TabSize: 4
+  m_FontSize: 30
+  m_FontStyle: 0
+  m_RichText: 1
+  m_Font: {fileID: 0}
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+--- !u!102 &102480581164090422
+TextMesh:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1989130680227538}
   m_Text: Name
   m_OffsetZ: 0
   m_CharacterSize: 0.96
@@ -166,11 +250,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   heroInfo:
-    Name: Archer
+    heroName: 
     maxHealth: 0
     currentHealth: 0
     currentActivity: 0
-  nameTxt: {fileID: 1120163628434602}
+  nameTxt: {fileID: 1989130680227538}
+  activityTxt: {fileID: 1120163628434602}
 --- !u!212 &212367438038504008
 SpriteRenderer:
   m_ObjectHideFlags: 1

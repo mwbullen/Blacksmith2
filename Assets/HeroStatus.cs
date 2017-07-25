@@ -8,6 +8,8 @@ public class HeroStatus : MonoBehaviour {
 	public HeroInfo heroInfo;
 
 	public GameObject nameTxt;
+	public GameObject activityTxt;
+
 
 	// Use this for initialization
 	void Start () {
@@ -19,7 +21,8 @@ public class HeroStatus : MonoBehaviour {
 		
 	}
 
-	public void loadHeroInfo(HeroInfo heroInfo) {
+	public void refreshDisplay() {
 		nameTxt.GetComponent<TextMesh> ().text = heroInfo.heroName;	
+		activityTxt.GetComponent<TextMesh> ().text = heroInfo.currentActivity.ToString ();
 	}
 }

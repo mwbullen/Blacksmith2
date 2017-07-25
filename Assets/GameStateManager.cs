@@ -162,10 +162,12 @@ public class GameStateManager : MonoBehaviour {
 		int y = 0;
 		foreach (HeroInfo heroInfo in currentGameStateInfo.heroes) {
 			GameObject newHero = GameObject.Instantiate (heroPrefab);
-			newHero.GetComponent<HeroStatus> ().loadHeroInfo (heroInfo);
+			newHero.GetComponent<HeroStatus> ().heroInfo = heroInfo;
 
 			newHero.transform.SetParent (HeroArea.transform);
 			newHero.transform.localPosition = new Vector3 (0, y, 0);
+
+			newHero.GetComponent<HeroStatus> ().refreshDisplay ();
 
 			y += 1;
 		}
