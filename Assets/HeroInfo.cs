@@ -6,8 +6,11 @@ namespace AssemblyCSharp
 	[Serializable]
 	public class HeroInfo
 	{		
-		static string[] possibleNames = { "Archer", "Cyril", "Lana", "Pam", "Mallory", "Kreiger", "Cheryl" }; 
+		static string[] possibleNames = { "Archer", "Cyril", "Lana", "Pam", "Mallory", "Kreiger", "Cheryl" , "Barry"}; 
 		public enum Activity{Shop, Exploring, Fighting, Returning	};
+
+		//desired Mission
+		//Equipped item
 
 		static System.Random r = new Random ();
 
