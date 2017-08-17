@@ -7,7 +7,7 @@ namespace AssemblyCSharp
 	[Serializable]
 	public class WorkbenchInfo :ContentsManagerInfo
 	{		
-		
+				
 		public WorkbenchInfo ()
 		{
 		}

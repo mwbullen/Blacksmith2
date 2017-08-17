@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4716522402029562}
   - component: {fileID: 114609568284204520}
   - component: {fileID: 114443378867621178}
+  - component: {fileID: 114163626313342596}
   m_Layer: 0
   m_Name: Workbench
   m_TagString: WorkBench
@@ -70,6 +71,17 @@ Transform:
   m_Father: {fileID: 4716522402029562}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114163626313342596
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1649380872452250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a76627e55551f15409ce6a09b4d92b03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114443378867621178
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -99,4 +111,6 @@ MonoBehaviour:
   contentInfo:
     contents: 
   slotsParent: {fileID: 1914512726518388}
+  numRows: 0
+  numColumns: 0
   gameControl: {fileID: 0}

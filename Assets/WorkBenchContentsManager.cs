@@ -19,6 +19,10 @@ public class WorkBenchContentsManager : MonoBehaviour {
 		
 	}
 
+
+
+
+
 	public void loadContents(WorkbenchInfo contents) {
 		gameControl = GameObject.Find ("GameControl");
 		contentInfo = contents;
