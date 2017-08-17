@@ -5,6 +5,15 @@ using UnityEngine;
 
 public class BuildManager : MonoBehaviour {
 
+	public GameObject buildButton;
+	public GameObject buildButtonText;
+
+	public GameObject gameControl;
+	public int copperIngotCount;
+	public int ironIngotCount;
+
+	public WeaponInfo currentWeaponInfo;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -16,6 +25,34 @@ public class BuildManager : MonoBehaviour {
 	}
 
 	public void checkForBuildableItem() {
+		buildButton.GetComponent<UnityEngine.UI.Button> ().interactable = false;
+		currentWeaponInfo = null;
+
+		//ContentType.contentItem lastContentItem = ContentType.contentItem.none;
+
+		copperIngotCount = 0;
+		 ironIngotCount = 0;
+
+		foreach (tileDetail t in  gameObject.transform.GetComponentsInChildren<tileDetail>()) {
+			if (t.tileContentType == ContentType.contentItem.copper_ingot) {
+				copperIngotCount += 1;
+			}
+
+			if (t.tileContentType == ContentType.contentItem.iron_ingot) {
+				ironIngotCount += 1;
+			}
+		}
+
+		if (copperIngotCount >= 2) {
+			//build something copper
+			currentWeaponInfo = getItemforRecipe(ContentType.contentItem.copper_ingot, copperIngotCount);
+			displayBuildableWeaponInfo ();
+		} else 	if (ironIngotCount >= 2) {
+			currentWeaponInfo = getItemforRecipe(ContentType.contentItem.iron_ingot, ironIngotCount);
+			displayBuildableWeaponInfo ();
+		}
+
+		/*
 		List<ContentType.contentItem> currentContents=	gameObject.GetComponent<WorkBenchContentsManager>().getCurrentContents ().contents;
 
 		int matchedItemCount = 0;
@@ -35,10 +72,16 @@ public class BuildManager : MonoBehaviour {
 
 		if (matchedItemCount == currentContents.Count) {
 			//all items match
-			WeaponInfo buildAbleWeapon = getItemforRecipe(currentContents[0], matchedItemCount);
-
-			//display button to builditem
+			currentWeaponInfo = getItemforRecipe(lastContentItem, matchedItemCount);
+			displayBuildableWeaponInfo ();
 		}
+		*/
+	}
+
+	void displayBuildableWeaponInfo() {
+		buildButton.GetComponent<UnityEngine.UI.Button> ().interactable = true;
+
+		buildButtonText.GetComponent<UnityEngine.UI.Text> ().text = "Build " + currentWeaponInfo.weaponType.ToString ();
 	}
 
 	WeaponInfo getItemforRecipe(ContentType.contentItem ingredient, int ingredientCount) {
@@ -46,8 +89,7 @@ public class BuildManager : MonoBehaviour {
 		//3 metals = sword
 		//4 metals = greatsword
 
-		GameObject gameControl = GameObject.Find ("GameControl");
-
+		gameControl = GameObject.Find ("GameControl");
 
 		int damageMultiplier = 1;
 

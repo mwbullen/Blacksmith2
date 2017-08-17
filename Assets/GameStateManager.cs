@@ -61,6 +61,8 @@ public class GameStateManager : MonoBehaviour {
 		currentGameStateInfo.inventoryContents = new ContentsManagerInfo ();
 		currentGameStateInfo.inventoryContents.contents.Add (ContentType.contentItem.copper_ingot);
 		currentGameStateInfo.inventoryContents.contents.Add (ContentType.contentItem.iron_ingot);
+		currentGameStateInfo.inventoryContents.contents.Add (ContentType.contentItem.iron_ingot);
+		currentGameStateInfo.inventoryContents.contents.Add (ContentType.contentItem.iron_ingot);
 		currentGameStateInfo.inventoryContents.contents.Add (ContentType.contentItem.copper_ingot);
 
 		currentGameStateInfo.inventoryContents.contents.Add (ContentType.contentItem.none);
@@ -103,6 +105,7 @@ public class GameStateManager : MonoBehaviour {
 
 		foreach (GameObject workBench in GameObject.FindGameObjectsWithTag("WorkBench")) {
 			WorkbenchInfo tmpWBInfo = (WorkbenchInfo) workBench.GetComponent<WorkBenchContentsManager>().getCurrentContents ();
+			workBench.GetComponent<BuildManager>().checkForBuildableItem ();
 			currentGameStateInfo.workBenches.Add (tmpWBInfo);
 		}
 
