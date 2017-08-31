@@ -14,6 +14,7 @@ namespace AssemblyCSharp
 
 		public WeaponInfo (WeaponTemplate template, int damageMultiplier)
 		{
+			weaponType = template.weaponType;
 			minDamage = template.MinDamage * damageMultiplier;
 			maxDamage = template.MaxDamage * damageMultiplier;
 		}

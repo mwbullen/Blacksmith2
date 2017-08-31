@@ -52,30 +52,6 @@ public class BuildManager : MonoBehaviour {
 			displayBuildableWeaponInfo ();
 		}
 
-		/*
-		List<ContentType.contentItem> currentContents=	gameObject.GetComponent<WorkBenchContentsManager>().getCurrentContents ().contents;
-
-		int matchedItemCount = 0;
-		ContentType.contentItem lastContentItem = ContentType.contentItem.none;
-
-
-		foreach (ContentType.contentItem item in currentContents) {
-			if (lastContentItem == ContentType.contentItem.none) {
-				lastContentItem = item;
-				matchedItemCount += 1;
-			} else if (item == lastContentItem) {
-				matchedItemCount += 1;
-			} else {
-				matchedItemCount = 0;
-			}
-		}
-
-		if (matchedItemCount == currentContents.Count) {
-			//all items match
-			currentWeaponInfo = getItemforRecipe(lastContentItem, matchedItemCount);
-			displayBuildableWeaponInfo ();
-		}
-		*/
 	}
 
 	void displayBuildableWeaponInfo() {
